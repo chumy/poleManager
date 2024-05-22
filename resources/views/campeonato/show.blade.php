@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div class="pt-2 sm:pt-8 pb-2">
+    <div class="pt-2 sm:pt-4 pb-2">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
         <div class="sm:p-4 p-2 bg-gray-900 shadow rounded-lg ">
             <div class="max-w-7xl">
@@ -28,7 +28,11 @@
                 @auth 
                     @include('campeonato.partials.show-botonera')
                 @endauth 
-
+                <div class="mt-3" > 
+                    <x-primay-link href='{{route ("welcome") }}' >
+                        {{ __('Back') }}
+                    </x-primay-link>
+                    </div>
                
                 </div>
             </div>

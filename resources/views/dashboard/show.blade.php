@@ -65,7 +65,11 @@
                 
                     @include('dashboard.partials.logros')
                     
-
+                    <div class="mt-3"> 
+                        <x-primay-link href='{{route ("welcome") }}' >
+                            {{ __('Back') }}
+                        </x-primay-link>
+                        </div>
                
                 </div>
             </div>

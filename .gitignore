@@ -10,6 +10,8 @@
 .env
 .env.backup
 .env.production
+.env.chumy
+.env.doit
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

@@ -136,6 +136,7 @@ class ResultadoController extends Controller
         //
         
         $resultado = Resultado::where('carrera_id',$carrera->id)->where('inscrito_id', $inscrito->id)->first();
+        
 
         return view('resultado.show', compact(['carrera', 'inscrito','resultado']));
         
