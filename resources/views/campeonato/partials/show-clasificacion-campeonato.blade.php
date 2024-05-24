@@ -72,7 +72,7 @@
                         </div>
                         <div>
                         <p class="font-semibold">{{$resultado['inscrito']->usuario()->first()->name}}</p>
-                        <p class="text-xs text-gray-600">{{($resultado['inscrito']->usuario()->first()->bot == 1) ? 'Bot' : CountryFlag::get('ES')}}  </p>
+                        <p class="text-xs text-gray-600">{{($resultado['inscrito']->usuario()->first()->bot == 1) ? 'Bot' : CountryFlag::get($resultado['inscrito']->usuario()->first()->pais )}}  </p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,9 @@
                 @endif
                 @if ($campeonato->cartas_escuderia)
                     <div class="hidden sm:grid place-items-center px-5 py-3  tracking-wider {{($loop->odd) ? 'bg-black bg-opacity-20' :'' }} pl-4 text-center">
-                        {{ $resultado['inscrito']->cartaEscuderia()->first()->nombre }} 
+                        @if (!$resultado['inscrito']->usuario()->first()->bot)
+                            {{ $resultado['inscrito']->cartaEscuderia()->first()->nombre }} 
+                        @endif
                     </div>
                 @endif
                     <div class="hidden sm:grid place-items-center px-5 py-3  tracking-wider {{($loop->odd) ? 'bg-black bg-opacity-20' :'' }} pl-4 text-center">

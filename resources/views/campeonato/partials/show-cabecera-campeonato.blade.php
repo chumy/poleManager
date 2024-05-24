@@ -75,7 +75,7 @@
 
 </section>
 
-@if ($campeonato->activo == 0)
+@if ($campeonato->activo == 0 && Auth::user()->id == $campeonato->user_id)
 <form method="post" action="{{ route('campeonato.update', ['campeonato' => $campeonato]) }}" class="mt-6 space-y-6">
     @csrf
     @method('put')

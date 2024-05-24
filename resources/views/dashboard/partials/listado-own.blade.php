@@ -1,10 +1,10 @@
 <!-- component -->
 
 <h2 class="text-lg font-medium text-amber-500">
-    {{ __('Created Championships') }}
+    {{ __('Your Championships') }}
     </h2>
     
-    @if ($user->listadoCampeonatosPropios()->count() > 0)  
+    @if ($user->listadoCampeonatos()->count() > 0)  
     
     <div class="flex flex-col">
         <div class="shadow overflow-hidden sm:rounded-lg bg-gray-800 ">
@@ -26,7 +26,7 @@
                 {{__('Actions')}}
                 </div>
             
-                @foreach ($user->listadoCampeonatosPropios()->paginate(5,['*'],'own') as $campeonato)
+                @foreach ($user->listadoCampeonatos()->paginate(5,['*'],'own') as $campeonato)
                 <div class="grid place-items-center px-5 py-3  tracking-wider {{($loop->odd) ? 'bg-black bg-opacity-20' :'' }} pl-4 text-center">
                     <a href="{{route ('campeonato.show', ['campeonato' => $campeonato->hashid]) }}">
                         {{$campeonato['nombre']}}
@@ -71,7 +71,7 @@
         </div>     
     </div>    
     <div class="mt-1"> 
-    {{ $user->listadoCampeonatosPropios()->paginate(5,['*'],'own')->links('pagination::tailwind') }}
+    {{ $user->listadoCampeonatos()->paginate(5,['*'],'own')->links('pagination::tailwind') }}
     </div>
     
     @else
