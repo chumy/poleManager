@@ -70,6 +70,12 @@ class User extends Authenticatable implements MustVerifyEmail
             });  
     }
 
+    public function listadoCampeonatosActivos(){
+        return Campeonato::where('activo','1')->whereIn('id',function($query)  {
+            $query->select('campeonato_id')->from('inscritos')->where('user_id',$this->id);
+            });  
+    }
+
     public function listadoCampeonatosPropios(){
         return Campeonato::where('user_id',$this->id)->orderBy('activo')->orderBy('created_at', 'desc');  
     }

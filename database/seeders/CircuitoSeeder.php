@@ -40,5 +40,15 @@ class CircuitoSeeder extends Seeder
             'nombre' => 'Brazil',
             'country' => 'BR',
         ]);
+
+        Circuito::create([
+            'nombre' => 'Germany',
+            'country' => 'DE',
+        ]);
+
+        Circuito::create([
+            'nombre' => 'United States of America',
+            'country' => 'US',
+        ]);
     }
 }

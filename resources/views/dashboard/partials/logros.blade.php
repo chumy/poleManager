@@ -112,7 +112,7 @@
   <div class="group flex flex-col gap-2 rounded-lg bg-gray-700 p-5 text-white" tabindex="{{$loop->index +2}}">
     <div class="flex cursor-pointer items-center justify-between" onclick="showLogro('circuito{{$circuito->id}}')">
       <div class="flex place-content-center" >
-          <div class="flex "> {{CountryFlag::get($circuito->country)}}</div>
+          <div class="flex text-xl"> {{CountryFlag::get($circuito->country)}}</div>
           <div class="flex items-center text-center text-xl text-gray-300 font-extrabold px-4">{{__($circuito->nombre)}}</div>
       </div>
       <img onclick="showLogro('circuito{{$circuito->id}}')"

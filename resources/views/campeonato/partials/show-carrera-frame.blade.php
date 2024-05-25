@@ -191,7 +191,7 @@
                                     </div>
                                     <div>
                                     <p class="font-semibold">{{$resultado->inscrito()->usuario()->first()->name}}</p>
-                                    <p class="text-xs text-gray-600">{{($resultado->inscrito()->usuario()->first()->bot == 1) ? 'Bot' : CountryFlag::get('ES')}}</p>
+                                    <p class="text-xs text-gray-600">{{($resultado->inscrito()->usuario()->first()->bot == 1) ? 'Bot' : CountryFlag::get($resultado->inscrito()->usuario()->first()->pais)}}</p>
                                     </div>
                                 </div>
                             </td>

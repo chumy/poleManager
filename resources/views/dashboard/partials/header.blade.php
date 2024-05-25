@@ -47,7 +47,7 @@
             
             <div class="px-4 py-4 whitespace-nowrap text-gray-200 text-center items-center font-extrabold">{{$user->getCampeonatosGanados()}}</div>
             <div class="px-4 py-4 whitespace-nowrap text-gray-200 text-center items-center font-extrabold">{{$user->getCountResults('posicion','1')}}</div>
-            <div class="px-4 py-4 whitespace-nowrap text-gray-200 text-center font-extrabold">{{$user->getCountResults('posicion','3')}}</div>
+            <div class="px-4 py-4 whitespace-nowrap text-gray-200 text-center font-extrabold">{{$user->getCountResults('posicion','2')}}</div>
             <div class="px-4 py-4 whitespace-nowrap text-gray-200 text-center items-center font-extrabold">{{$user->getCountResults('posicion','3')}}</div>
             <div class="px-4 py-4 whitespace-nowrap text-gray-200 text-center items-center font-extrabold">{{$user->getCountResults('qualy','1')}}</div>
             
